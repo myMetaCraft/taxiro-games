@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Taxiro favicon: simplified v3 Medallion (gold coin with T, no crown) for small sizes -->
+  <defs>
+    <linearGradient id="fg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0c4"/><stop offset=".42" stop-color="#ffbe4d"/><stop offset="1" stop-color="#ff7d1f"/></linearGradient>
+    <radialGradient id="fd" cx=".5" cy=".35" r=".7"><stop offset="0" stop-color="#2a2131"/><stop offset="1" stop-color="#0c0a10"/></radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="31" fill="url(#fg)"/>
+  <circle cx="32" cy="32" r="24" fill="url(#fd)"/>
+  <path d="M17 17.5h30v8H36.5V48h-9V25.5H17z" fill="url(#fg)"/>
+</svg>

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Taxiro demo portal — games.json",
+  "type": "object",
+  "required": ["schemaVersion", "games"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "rtpPolicy": {
+      "type": "object",
+      "properties": { "min": { "type": "number" }, "max": { "type": "number" }, "note": { "type": "string" } }
+    },
+    "games": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "status", "embedUrl", "rtp", "maxWinX", "verified", "verifiedAt"],
+        "properties": {
+          "id":         { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "URL id, used as play.html?game=<id>" },
+          "name":       { "type": "string" },
+          "status":     { "enum": ["coming-soon", "live"], "description": "coming-soon renders a placeholder card" },
+          "tagline":    { "type": "string" },
+          "embedUrl":   { "type": "string", "description": "Demo RGS launch URL: https://<rgs>/launch/<id> (the RGS mints a fun-money session and redirects to the game build). Empty for coming-soon." },
+          "rtp":        { "type": "object", "additionalProperties": { "type": "number", "minimum": 96.0, "maximum": 96.7 }, "description": "RTP % per mode, copied from verify-rtp.mjs output" },
+          "maxWinX":    { "type": ["number", "null"], "description": "Max win in multiples of the base bet, from verify-rtp.mjs" },
+          "verified":   { "type": "boolean", "description": "true only after verify-rtp.mjs PASS on the exact math the demo RGS serves" },
+          "verifiedAt": { "type": ["string", "null"], "format": "date-time" },
+          "mathSha256": { "type": ["string", "null"], "description": "Fingerprint printed by verify-rtp.mjs; must equal the fingerprint of the tables loaded by the demo RGS" },
+          "thumbnail":  { "type": "string", "description": "Optional path to a cover image in assets/games/ (art only, no game code)" },
+          "features":   { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

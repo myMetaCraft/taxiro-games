@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- TODO: once game hosting exists, narrow frame-src from https: to the game host origin(s). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src https:; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Demo | Taxiro</title>
+  <meta name="theme-color" content="#07070b">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="player-page">
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="Taxiro home">
+        <img src="assets/taxiro-logo.svg" alt="Taxiro" width="202.28" height="56">
+        <span class="brand-sub">Demo player</span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a class="hide-sm" href="index.html#games">All games</a>
+        <a class="btn btn-sm btn-primary" href="index.html#partners">Partner with us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="crumbs"><a href="index.html#games">Games</a><span>/</span><span id="crumb-name">…</span></div>
+      <div class="player-head">
+        <h1 id="game-name">Loading…</h1>
+        <div class="tags" id="game-tags"></div>
+      </div>
+      <div class="player-layout">
+        <div>
+          <div class="stage" id="stage"></div>
+          <div class="stage-toolbar">
+            <span>Fun-money demo. Balances and wins have no cash value.</span>
+            <button class="btn btn-sm" id="fs-btn" hidden>Fullscreen</button>
+          </div>
+        </div>
+        <aside class="player-side">
+          <div class="info-card" id="facts"></div>
+          <div class="info-card">
+            <h3>Want this game?</h3>
+            <p>We tailor themes, features and volatility for each partner.</p>
+            <a class="btn btn-primary btn-sm" style="width:100%;margin-top:16px" href="index.html#partners">Contact Taxiro <span class="arrow">→</span></a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="legal" style="margin-top:0;padding-top:0;border-top:0">
+        <span>© <span data-year>2026</span> Taxiro. All rights reserved.</span>
+        <span>Demo games use fun money only. No real-money play on this site. For business partners, 18+.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/player.js"></script>
+</body>
+</html>

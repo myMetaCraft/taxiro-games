@@ -1,0 +1,23 @@
+# This repo is the PUBLIC portal shell only. Never commit game builds or math.
+# Math output (lookup tables, books, configs)
+lookUpTable_*.csv
+books_*.jsonl
+books_*.jsonl.zst
+*.jsonl.zst
+**/publish_files/
+**/library/
+**/math/
+# Game bundles / builds
+**/frontend/
+**/build/
+**/dist/
+*.zip
+# Local verification reports (may contain local paths)
+rtp-report*.json
+node_modules/
+.DS_Store
+# Exception: tiny SYNTHETIC test data for tools/verify-rtp.mjs
+!tools/examples/**/lookUpTable_*.csv
+!tools/examples/**/books_*.jsonl
+# Local review screenshots and check logs
+screens/

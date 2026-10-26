@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "rtpPolicy": { "min": 96.0, "max": 96.7, "note": "Every mode of every listed game must pass tools/verify-rtp.mjs before verified=true." },
+  "games": [
+    {
+      "id": "coming-soon",
+      "name": "Coming soon",
+      "status": "coming-soon",
+      "tagline": "Our first original title is in production.",
+      "embedUrl": "",
+      "rtp": {},
+      "maxWinX": null,
+      "verified": false,
+      "verifiedAt": null,
+      "mathSha256": null,
+      "thumbnail": ""
+    }
+  ]
+}
