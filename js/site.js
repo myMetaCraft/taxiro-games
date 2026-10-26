@@ -33,7 +33,7 @@
   };
   // A game is playable only when it is live, verified, every mode is inside the RTP policy and the embed URL is HTTPS.
   window.MC_isPlayable = (g) => {
-    const p = (window.MC_CONFIG || {}).rtpPolicy || { min: 96.0, max: 96.7 };
+    const p = (window.MC_CONFIG || {}).rtpPolicy || { min: 85.0, max: 99.0 };
     const rtps = Object.values(g.rtp || {});
     let url = null; try { url = new URL(g.embedUrl); } catch { /* invalid */ }
     const originOk = url && url.protocol === 'https:' && ((cfg.allowedEmbedOrigins || []).length === 0 || cfg.allowedEmbedOrigins.includes(url.origin));

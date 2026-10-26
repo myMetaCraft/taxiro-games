@@ -16,5 +16,5 @@ window.MC_CONFIG = {
     "https://games.taxiro.ai",
     "https://mymetacraft.github.io"
   ],
-  rtpPolicy: { min: 96.0, max: 96.7 }
+  rtpPolicy: { min: 85.0, max: 99.0 }
 };

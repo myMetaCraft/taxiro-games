@@ -20,7 +20,7 @@
           "status":     { "enum": ["coming-soon", "live"], "description": "coming-soon renders a placeholder card" },
           "tagline":    { "type": "string" },
           "embedUrl":   { "type": "string", "description": "Demo RGS launch URL: https://<rgs>/launch/<id> (the RGS mints a fun-money session and redirects to the game build). Empty for coming-soon." },
-          "rtp":        { "type": "object", "additionalProperties": { "type": "number", "minimum": 96.0, "maximum": 96.7 }, "description": "RTP % per mode, copied from verify-rtp.mjs output" },
+          "rtp":        { "type": "object", "additionalProperties": { "type": "number", "minimum": 85.0, "maximum": 99.0 }, "description": "RTP % per mode, copied from verify-rtp.mjs output" },
           "maxWinX":    { "type": ["number", "null"], "description": "Max win in multiples of the base bet, from verify-rtp.mjs" },
           "verified":   { "type": "boolean", "description": "true only after verify-rtp.mjs PASS on the exact math the demo RGS serves" },
           "verifiedAt": { "type": ["string", "null"], "format": "date-time" },

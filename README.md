@@ -32,7 +32,7 @@ and under a project sub-path (`https://<user>.github.io/taxiro-games/`) — all 
 
 1. **Fun money only.** No real-money play, wallets, deposits or payments on this site or its demo RGS.
 2. **Math never reaches the browser.** The demo RGS draws outcomes server-side (see `docs/ARCHITECTURE.md`).
-3. **RTP gate.** Every mode must be 96.0–96.7 % and the max win within the cap, proven by
+3. **RTP gate.** Every mode must be inside the game's agreed target RTP range (sanity limits 85–99 %) and the max win within the cap, proven by
    `node tools/verify-rtp.mjs <mathDir>` on the *exact* tables the demo RGS loads. The gallery
    shows RTP and the *Verified* badge only when `verified: true`; the Play button only appears
    when the game is `live`, verified, every mode is within policy and `embedUrl` is HTTPS.

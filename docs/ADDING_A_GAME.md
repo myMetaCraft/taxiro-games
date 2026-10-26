@@ -8,9 +8,9 @@ Until then keep it out, or list it as `"status": "coming-soon"` with `"verified"
 - [ ] Run the gate on the exact folder the demo RGS will load:
       ```bash
       node tools/verify-rtp.mjs /path/to/private/publish_files --id <game-id> \
-           --min 96.0 --max 96.7 --max-win-x <cap> --json /tmp/<game-id>-rtp.json
+           --min <target-low> --max <target-high> --max-win-x <cap> --json /tmp/<game-id>-rtp.json
       ```
-- [ ] Result is **PASS** (exit code 0): every mode RTP within 96.0–96.7 %, max win ≤ cap,
+- [ ] Result is **PASS** (exit code 0): every mode RTP within the game's agreed target range, max win ≤ cap,
       tables valid (no duplicate ids, integer weights/payouts).
 - [ ] Books cross-check is `ok` (if books are `.zst`, decompress to `.jsonl` or use Node ≥ 22.15),
       otherwise note why it was skipped.

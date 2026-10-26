@@ -25,7 +25,7 @@
 - **Same math as the real game.** The demo RGS loads the game's official math output
   (the same `index.json`, lookup tables and books that the release uses). Outcome selection is
   `P(id) = weight / Σweight` per mode, exactly like production, so the demo has the same RTP
-  (96.0–96.7 % in every mode) and the same max win.
+  (the game's own target RTP in every mode) and the same max win.
 - **Fingerprint match.** At start-up the demo RGS computes the SHA-256 fingerprint of its lookup
   tables the same way `tools/verify-rtp.mjs` does (mode name + cost + table bytes, in index order)
   and refuses to serve a game whose fingerprint differs from the `mathSha256` pinned in the

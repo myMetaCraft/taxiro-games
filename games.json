@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "rtpPolicy": { "min": 96.0, "max": 96.7, "note": "Every mode of every listed game must pass tools/verify-rtp.mjs before verified=true." },
+  "rtpPolicy": { "min": 85.0, "max": 99.0, "note": "Sanity range only. Each game is tuned to its partner's target RTP; every mode must pass tools/verify-rtp.mjs (with the game's own --min/--max) before verified=true." },
   "games": [
     {
       "id": "coming-soon",
